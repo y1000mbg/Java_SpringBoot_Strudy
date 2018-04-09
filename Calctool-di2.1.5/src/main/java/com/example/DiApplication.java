@@ -13,7 +13,9 @@ import com.example.app.Calculator;
 /*
  * CommandLineRunerインタフェイスはDiApplicationクラスから
  * 直接Autowiredとrunメソッドを実装できる
- * 2.1.5ではFrontendクラスが該当していた処理を集約化した
+ * 2.1.4ではFrontendクラスが該当していた処理を集約化した
+ * CommandLineRunnerインタフェースはrunメソッドを実装することで
+ * 実処理の実装が可能。Frontendが不要になった。
  */
 
 @SpringBootApplication
