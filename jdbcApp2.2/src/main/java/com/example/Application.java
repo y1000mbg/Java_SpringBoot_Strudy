@@ -18,7 +18,7 @@ public class Application implements CommandLineRunner {
 	public void run(String... strings) throws Exception {
 		
 		// JDBCのpreparedstatmentではプレースホルダで?を指定していたが
-		// Spring-bootでは:aなどで評議する
+		// Spring-bootでは:aなどで指定する
 		String sql = "SELECT :a + :b";
 
 		// プレースホルダーに値を反映
