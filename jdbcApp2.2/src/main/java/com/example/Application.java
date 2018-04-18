@@ -16,6 +16,24 @@
  * 
  */
 
+/*
+ * Log4jdbcの設定を追加
+ * 
+ * 設定はsrc/main/resources/application.propetiesせ設定追加
+ * 
+ * 実行時ログに下記の様のSQLの実行ログが出力される
+2018-04-18 15:04:00.623 DEBUG 11868 --- [           main] jdbc.sqltiming                           :  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. INSERT INTO customers (first_name,last_name) VALUES('Nobita','Nobi')  {executed in 3 msec}
+2018-04-18 15:04:00.624 DEBUG 11868 --- [           main] jdbc.sqltiming                           :  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. INSERT INTO customers (first_name,last_name) VALUES('Takeshi','Goda')  {executed in 0 msec}
+2018-04-18 15:04:00.624 DEBUG 11868 --- [           main] jdbc.sqltiming                           :  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. INSERT INTO customers (first_name,last_name) VALUES('Suneo','Honekawa')  {executed in 0 msec}
+2018-04-18 15:04:00.625 DEBUG 11868 --- [           main] jdbc.sqltiming                           :  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. INSERT INTO customers (first_name,last_name) VALUES('Shizuka','Minamoto')  {executed in 0 msec}
+2018-04-18 15:04:00.917 DEBUG 11868 --- [           main] jdbc.sqltiming                           :  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. SELECT id, first_name, last_name FROM customers WHERE id = 1  {executed in 3 msec}
+ */
+
 package com.example;
 
 import java.sql.ResultSet;
